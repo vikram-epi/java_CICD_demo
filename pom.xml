@@ -45,8 +45,20 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
-                <dependencies>
-                    <dependency>
+                
+                    
+                
+          <configuration>
+          <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+         <dependencies>
+    <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider</artifactId>
                         <version>1.1.0</version>
@@ -61,18 +73,6 @@
         <artifactId>testng</artifactId>
         <version>6.14.3</version>
     </dependency>
-                
-          <configuration>
-          <suiteXmlFiles>
-          <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-          </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    </dependencies>
-         <dependencies>
-    
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
@@ -90,5 +90,7 @@
             <version>2.8.1</version>
         </dependency>
     </dependencies>
-
+<properties>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 </project>
