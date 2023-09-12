@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build and test
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file pom.xml test
       
   publish-job:
       runs-on: ubuntu-latest
